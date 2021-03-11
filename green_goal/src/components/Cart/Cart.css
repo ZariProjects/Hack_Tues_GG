@@ -1,4 +1,6 @@
 .Cart {
     /* Вие сте */
-    background-color: aliceblue;
+    background-color: white;
+    display: block;
+    border: 1px solid black;
 }
