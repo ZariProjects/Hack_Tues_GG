@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import Cards from './Cards/Cards';
-import Navbar from "../components/NavigationBar/NavigationBar"
+import Navbar from "../components/NavigationBar/NavigationBar";
+import { Route, Switch } from 'react-router-dom';
+import Login from '../containers/Login/Login';
+
 class App extends Component {
   render () {
     return (
@@ -10,7 +13,10 @@ class App extends Component {
         <br></br>
         <br></br>
         <br></br>
-        <Cards />
+        <Switch>
+            <Route path="/Login" component={Login} />
+            <Route path="/" exact component={Cards} />
+        </Switch>
         
       </div>
     );
