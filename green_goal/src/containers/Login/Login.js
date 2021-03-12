@@ -8,29 +8,29 @@ class Login extends Component {
 
             <div class="center">
                 <div class="container">
-                    <label for="show" class="close-btn fas fa-times" title="close"></label>
                     <div class="text">
                         Login Form</div>
-                        <form action="#">
-                            <div class="data">
-                                <label>Email or Phone</label>
-                                <input type="text" required></input>
+                    <form action="#">
+                        <div class="data">
+                            <label>Email or Phone</label>
+                            <input type="text" required></input>
+                            <i class="far fa-envelope"></i>
+                        </div>
+                        <div class="data">
+                            <label>Password</label>
+                            <input type="password" required></input>
+                            <div class="forgot-pass">
+                                <a href="#">Forgot Password?</a>
                             </div>
-                            <div class="data">
-                                <label>Password</label>
-                                <input type="password" required></input>
-                                <div class="forgot-pass">
-                                    <a href="#">Forgot Password?</a>
-                                </div>
-                                <div class="btn">
-                                    <div class="inner"></div>
-                                    <button type="submit"><span>login</span></button>
-                                </div>
-                                <div class="signup-link">
-                                    Not a member? <a href="#">Signup now</a>
-                                </div>
+                            <div class="btn">
+                                <div class="inner"></div>
+                                <button type="submit"><span>login</span></button>
                             </div>
-                        </form>
+                            <div class="signup-link">
+                                Not a member? <a href="#">Signup now</a>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         );
