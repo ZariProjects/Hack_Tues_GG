@@ -3,6 +3,7 @@
 .NavbarItems
 {
     z-index: 1;
+    text-decoration: none;
     display: flex;
     justify-content: space-around;
     background-color: black;
@@ -72,4 +73,7 @@ button
 h1
 {
     color:rgb(64, 255, 64);
+}
+*{
+    text-decoration: none;
 }
