@@ -1,8 +1,11 @@
-import * as actionTypes from '../actions/actionTypes';
+/*import * as actionTypes from '../actions/actionTypes';
+
 
 const initialState = {
-    cards: 3
+    cards: null
 };
+
+
 
 export const cardReducer = (state=initialState, action) => {
     switch(action.type) {
@@ -14,4 +17,4 @@ export const cardReducer = (state=initialState, action) => {
         default:
             return state
     }
-}
+}*/

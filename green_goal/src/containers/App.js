@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
 import Cards from './Cards/Cards';
-import Navbar from "../components/NavigationBar/NavigationBar";
-import { Route, Switch } from 'react-router-dom';
-import Login from '../containers/Login/Login';
+import Navbar from "../components/NavigationBar/NavigationBar"
+import {
+  Switch,
+  Route
+} from "react-router-dom";
+import Settings from './Settings/Settings';
+import SignUp from './SignUp/SignUp';
+import Profile from './Profile/Profile';
+import Login from './Login/Login';
 
 class App extends Component {
   render () {
@@ -13,14 +19,19 @@ class App extends Component {
         <br></br>
         <br></br>
         <br></br>
-        <Switch>
-            <Route path="/Login" component={Login} />
-            <Route path="/" exact component={Cards} />
-        </Switch>
+        <br></br>
+        <Switch >
+          <Route path="/log_in" component={Login} />
+          <Route path="/profile" component={Profile} />
+          <Route path="/sign_up" component={SignUp} />
+          <Route path="/settings" component={Settings}/>
+          <Route path="/" exact component={Cards} />
+        </Switch >
         
       </div>
     );
   }
+  
 } 
 
 export default App;
