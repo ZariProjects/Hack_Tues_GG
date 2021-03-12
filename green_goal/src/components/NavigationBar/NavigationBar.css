@@ -2,7 +2,7 @@
 {
     display: flex;
     justify-content: space-between;
-    background-color: rgba(50, 20, 70, 0.3);
+    background-color: rgb(80, 235, 80);
     font-size: 20px;
 }
 
@@ -27,12 +27,27 @@ li a
 
 a:link
 {
+<<<<<<< HEAD
     color:white;
+=======
+    align-self: center;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color:rgb(134, 247, 134);
+    color: white;
+    font-size: 20px;
+>>>>>>> 6ce306c04211fad6be7442be83aebb9d95b79430
 }
 
 a:visited
 {
     color:white;
+}
+
+a:visited
+{
+    color: white;
 }
 
 a:hover
