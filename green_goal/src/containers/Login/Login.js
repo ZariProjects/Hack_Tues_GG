@@ -19,7 +19,7 @@ class Login extends Component {
                             <label>Password</label>
                             <input type="password" required></input>
                             <div class="forgot-pass">
-                                <a href="#">Forgot Password?</a>
+                                <a class="underline" href="#">Forgot Password?</a>
                             </div>
                             <div class="btn">
                                 <div class="inner"></div>
