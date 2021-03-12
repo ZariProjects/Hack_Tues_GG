@@ -1,4 +1,4 @@
-/*import * as actionTypes from '../actions/actionTypes';
+import * as actionTypes from '../actions/actionTypes';
 
 
 const initialState = {
@@ -17,4 +17,4 @@ export const cardReducer = (state=initialState, action) => {
         default:
             return state
     }
-}*/
+}

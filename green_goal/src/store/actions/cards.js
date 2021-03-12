@@ -1,9 +1,9 @@
-/*import cors from 'cors';
-import mongoose from 'mongoose';
+//import cors from 'cors';
+//import mongoose from 'mongoose';
 import * as actionTypes from './actionTypes';
-import express from 'express';
-//import cardRouter from '../routes/cardRoute';
-import axios from 'axios';
+//import express from 'express';
+///import cardRouter from '../routes/cardRoute';
+//import axios from 'axios';
 
 //const app = express();
 
@@ -23,8 +23,8 @@ export const init_cards_start = (cardData) => {
 export const init_cards = () => {
     return {
         type: actionTypes.INIT_CARDS
-    }; /*dispatch => {
-        /*app.use(cors());
+    };}/* dispatch => {
+        app.use(cors());
         app.use(express.json());
         mongoose.connect('mongodb+srv://lacho:lacho123@cluster1.horty.mongodb.net/green_goal_main_db');
         app.use('/', cardRouter)
@@ -50,4 +50,4 @@ export const init_cards = () => {
             useCreateIndex: true
         });
     };
-};*/
+};}}*/
