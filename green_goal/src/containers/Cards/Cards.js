@@ -3,11 +3,17 @@ import Card from '../../components/Cart/Card';
 import img from './SampleImgDeleteLater.png';
 import * as actions from '../../store/actions';
 import {connect} from 'react-redux';
+import axios from 'axios';
 
 class Cards extends Component {
     
     onClickHandler() {
         alert('Dont Click My Apples');
+    }
+
+    componentDidMount () {
+        
+        
     }
     
     render () {
@@ -80,7 +86,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
    return {
-       onCardInit: () => dispatch(actions.init_cards())
+       //onCardInit: () => dispatch(actions.init_cards())
    }
 };
 
