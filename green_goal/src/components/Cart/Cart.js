@@ -7,12 +7,17 @@ const cart = (props) => {
     const imgHeigth = 75;
     return (
         <div className="Cart" onClick={props.clicked}>
-            <img src={props.img} alt={props.productName} width={imgWidth} height={imgHeigth} />
-            <p>{props.productName}</p>
-            <p>{props.sellerName}</p>
-            <p>{props.rating}/10</p>
-            <p>{props.price}lv</p>
-            {certification}
+            <div className="Img">
+            <   img src={props.img} alt={props.productName} width={imgWidth} height={imgHeigth} />
+            </div>
+            <div className="Text">
+                <p>{props.productName}</p>
+                <p>{props.sellerName}</p>
+                <p>{props.rating}/10</p>
+                <p>{props.price}lv</p>
+                {certification}
+            </div>
+            
         </div>
     );
 };

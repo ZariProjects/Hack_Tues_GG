@@ -1,6 +1,11 @@
 .Cart {
     /* Вие сте */
     background-color: white;
-    display: block;
     border: 1px solid black;
+    height: 300px;
+    width: 400px;
+    display: inline-block;
+    margin: 10px 10px;
+    vertical-align: bottom;
 }
+

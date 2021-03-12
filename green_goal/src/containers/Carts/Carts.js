@@ -12,7 +12,7 @@ class Carts extends Component {
     
     render () {
         return (
-            <div>
+            <div className="Carts">
                 <Cart
                 clicked={this.onClickHandler}
                 isCertified={false}
@@ -32,6 +32,33 @@ class Carts extends Component {
                 img={img}/>
 
                 <Cart
+                clicked={this.onClickHandler}
+                isCertified={false}
+                productName="Kruha"
+                sellerName="Baba Nqdq"
+                rating={6.6}
+                price={3}
+                img={img}/>
+
+<Cart
+                clicked={this.onClickHandler}
+                isCertified={false}
+                productName="Kruha"
+                sellerName="Baba Nqdq"
+                rating={6.6}
+                price={3}
+                img={img}/>
+
+<Cart
+                clicked={this.onClickHandler}
+                isCertified={false}
+                productName="Kruha"
+                sellerName="Baba Nqdq"
+                rating={6.6}
+                price={3}
+                img={img}/>
+
+<Cart
                 clicked={this.onClickHandler}
                 isCertified={false}
                 productName="Kruha"
