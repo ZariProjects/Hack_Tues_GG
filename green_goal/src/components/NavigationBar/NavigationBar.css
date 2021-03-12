@@ -23,18 +23,14 @@ li a
     text-decoration: none;
 }
 
-button
-{
-    align-self: center;
-    padding: 5px;
-    border: 1px solid black;
-    border-radius: 10px;
-    background-color: royalblue;
-    color: white;
-    font-size: 20px;
-}
+
 
 a:link
+{
+    color:white;
+}
+
+a:visited
 {
     color:white;
 }
