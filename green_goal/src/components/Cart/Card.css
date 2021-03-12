@@ -1,11 +1,28 @@
-.Card {
-    /* Вие сте */
-    background-color: white;
-    border: 1px solid black;
-    height: 300px;
-    width: 400px;
-    display: inline-block;
-    margin: 10px 10px;
-    vertical-align: bottom;
+.Border{
+    margin: 15px;
+    background-color:#cccccc;
+    border: 2px solid black;
+    height: 310px;
+    width: 480px;
+    display: inline-flex;
 }
 
+.hr_text{
+    border-bottom: 2px solid black;
+    max-width: 200px;
+}
+.Text {
+    margin: 10px;
+    text-align: left;
+}
+
+.Img{
+    border-right: 2px solid black;
+    width: 60%;
+    height: 100%;
+}
+
+.hr{
+    width: 100%;
+    height: 1px;
+}
