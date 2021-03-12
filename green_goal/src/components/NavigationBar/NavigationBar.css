@@ -1,9 +1,8 @@
 .NavbarItems
 {
     display: flex;
-    justify-content: space-between;
-    background-color: rgb(135, 255, 124);
-    font-size: 20px;
+    justify-content: space-around;
+    background-color: black;
 }
 
 .menu-icon
@@ -11,11 +10,18 @@
     display: none;
 }
 
+ul
+{
+    flex: 2;
+    align-self: center;
+}
+
 ul li
 {
     list-style-type: none;
     display: inline-block;
     padding: 5px;
+    font-size: 2px;
 }
 
 li a
@@ -23,21 +29,12 @@ li a
     text-decoration: none;
 }
 
-
-
 a:link
 {
-<<<<<<< HEAD
-    color:white;
-=======
     align-self: center;
     padding: 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color:rgb(134, 247, 134);
-    color: white;
+    color:rgb(64, 255, 64);
     font-size: 20px;
->>>>>>> 6ce306c04211fad6be7442be83aebb9d95b79430
 }
 
 a:visited
@@ -45,13 +42,26 @@ a:visited
     color:white;
 }
 
-a:visited
+a:hover, button:hover
 {
     color: white;
+    border-bottom: 3px solid white;
+    transition: all 0.5s ease;
+
 }
 
-a:hover
+button
 {
-    color: black;
-    transition: all 1s ease;
+    margin: 5px;
+    padding: 5px;
+    border: none;
+    background-color: black;
+    color:rgb(64, 255, 64);
+    font-size: 20px;
+    cursor:pointer;
+}
+
+h1
+{
+    color:rgb(64, 255, 64);
 }
