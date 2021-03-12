@@ -1,0 +1,26 @@
+import React, { Component } from 'react';
+import './NavigationBar.css'
+import { NavLink } from 'react-router-dom';
+
+class Navbar extends Component {
+    state = { clicked: false}
+    render() {
+        return(
+            <nav className = "NavbarItems">
+                <h1>GreenGoal</h1>
+                <ul>
+                <NavLink to="/">Home</NavLink>
+                <NavLink to="/profile">Profile</NavLink>
+                <NavLink to="/cart">Cart</NavLink>
+                <NavLink to="/settings">Settings</NavLink>
+                </ul>
+                <NavLink to="/sign_up">Sign Up</NavLink>
+                <NavLink to="/log_in">Log In</NavLink>
+                
+            </nav>
+        )
+        
+    }
+}
+
+export default Navbar;
