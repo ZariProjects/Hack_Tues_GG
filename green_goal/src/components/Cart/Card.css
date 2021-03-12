@@ -6,6 +6,7 @@
     width: 480px;
     display: inline-flex;
     -webkit-transition: padding 0.7s;
+    border-radius: 15px 15px 15px 15px;
 }
 
 .Border:hover
@@ -27,9 +28,11 @@
 .Img{
     border: 1px solid black;
     width: 60%;
-    height: 99.8%;
+    height: 99,9%;
     transition: 0.7s;
+    border-radius: 15px 15px 15px 15px;
 }
+
 
 .hr{
     width: 100%;
