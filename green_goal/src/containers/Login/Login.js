@@ -14,7 +14,6 @@ class Login extends Component {
                         <div class="data">
                             <label>Email or Phone</label>
                             <input type="text" required></input>
-                            <i class="far fa-envelope"></i>
                         </div>
                         <div class="data">
                             <label>Password</label>
