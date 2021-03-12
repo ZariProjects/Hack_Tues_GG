@@ -1,4 +1,4 @@
-import * as actionTypes from './actionTypes';
+/*import * as actionTypes from './actionTypes';
 
 export {
     set_cards,
@@ -7,4 +7,4 @@ export {
 
 export {
     auth_place_holder
-}from './auth';
+}from './auth';*/

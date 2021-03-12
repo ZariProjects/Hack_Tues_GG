@@ -77,7 +77,7 @@ class Cards extends Component {
         );
     }
 };
-
+/*
 const mapStateToProps = state => {
     return {
         cards: state.card.cardData
@@ -88,6 +88,6 @@ const mapDispatchToProps = dispatch => {
    return {
        //onCardInit: () => dispatch(actions.init_cards())
    }
-};
+};*/
 
-export default connect(mapStateToProps, mapDispatchToProps)(Cards);
+export default Cards;//connect(mapStateToProps, mapDispatchToProps)(Cards);
