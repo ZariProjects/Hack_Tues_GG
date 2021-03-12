@@ -13,7 +13,7 @@ class Navbar extends Component {
                 <NavLink to="/cart">Cart</NavLink>
                 <NavLink to="/settings">Settings</NavLink>
                 <NavLink to="/sign_up">Sign Up</NavLink>
-                <NavLink to="/sign_in">Sign In</NavLink>
+                <NavLink to="/log_in">Log In</NavLink>
             </nav>
         )
         

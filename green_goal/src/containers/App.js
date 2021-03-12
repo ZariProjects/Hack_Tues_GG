@@ -9,17 +9,23 @@ import {
 import Settings from './Settings/Settings';
 import SignUp from './SignUp/SignUp';
 import Profile from './Profile/Profile';
+import Login from './Login/Login';
 
 class App extends Component {
   render () {
     return (
       <div className="App">
         <Navbar/>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
         <Switch >
-            <Route path="/profile" component={Profile} />
-            <Route path="/sign_up" component={SignUp} />
-            <Route path="/settings" component={Settings}/>
-            <Route path="/" exact component={Cards} />
+          <Route path="/log_in" component={Login} />
+          <Route path="/profile" component={Profile} />
+          <Route path="/sign_up" component={SignUp} />
+          <Route path="/settings" component={Settings}/>
+          <Route path="/" exact component={Cards} />
         </Switch >
         
       </div>
