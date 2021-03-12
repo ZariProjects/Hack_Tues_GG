@@ -1,0 +1,11 @@
+.Card {
+    /* Вие сте */
+    background-color: white;
+    border: 1px solid black;
+    height: 300px;
+    width: 400px;
+    display: inline-block;
+    margin: 10px 10px;
+    vertical-align: bottom;
+}
+

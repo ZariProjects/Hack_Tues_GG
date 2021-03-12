@@ -6,13 +6,13 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
-import {cartReducer} from './store/reducers/cart';
+import {cardReducer} from './store/reducers/card';
 import thunk from 'redux-thunk';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
-  cart: cartReducer
+  card: cardReducer
 });
 
 const store = createStore(rootReducer, composeEnhancers(

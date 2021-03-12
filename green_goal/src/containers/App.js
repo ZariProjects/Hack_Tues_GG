@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import Carts from './Carts/Carts';
+import Cards from './Cards/Cards';
 import Navbar from "../components/NavigationBar/NavigationBar"
 class App extends Component {
   render () {
     return (
       <div className="App">
-        <h1>GreenGoal</h1>
         <Navbar/>
-        <Carts />
+        <Cards />
         
       </div>
     );

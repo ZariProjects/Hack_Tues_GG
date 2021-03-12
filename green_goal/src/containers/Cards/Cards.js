@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Cart from '../../components/Cart/Cart';
+import Card from '../../components/Cart/Card';
 import img from './SampleImgDeleteLater.png';
 import * as actions from '../../store/actions';
 import {connect} from 'react-redux';
 
-class Carts extends Component {
+class Cards extends Component {
     
     onClickHandler() {
         alert('Dont Click My Apples');
@@ -12,8 +12,8 @@ class Carts extends Component {
     
     render () {
         return (
-            <div>
-                <Cart
+            <div className="Cards">
+                <Card
                 clicked={this.onClickHandler}
                 isCertified={false}
                 productName="Qbylka"
@@ -22,7 +22,7 @@ class Carts extends Component {
                 price={10}
                 img={img}/>
 
-                <Cart
+                <Card
                 clicked={this.onClickHandler}
                 isCertified={true}
                 productName="Dinq"
@@ -31,7 +31,34 @@ class Carts extends Component {
                 price={4}
                 img={img}/>
 
-                <Cart
+                <Card
+                clicked={this.onClickHandler}
+                isCertified={false}
+                productName="Kruha"
+                sellerName="Baba Nqdq"
+                rating={6.6}
+                price={3}
+                img={img}/>
+
+<Card
+                clicked={this.onClickHandler}
+                isCertified={false}
+                productName="Kruha"
+                sellerName="Baba Nqdq"
+                rating={6.6}
+                price={3}
+                img={img}/>
+
+<Card
+                clicked={this.onClickHandler}
+                isCertified={false}
+                productName="Kruha"
+                sellerName="Baba Nqdq"
+                rating={6.6}
+                price={3}
+                img={img}/>
+
+<Card
                 clicked={this.onClickHandler}
                 isCertified={false}
                 productName="Kruha"
@@ -47,14 +74,14 @@ class Carts extends Component {
 
 const mapStateToProps = state => {
     return {
-        carts: state.cart.cartData
+        cards: state.card.cardData
     };
 };
 
 const mapDispatchToProps = dispatch => {
    return {
-       onCartInit: () => dispatch(actions.init_cards())
+       onCardInit: () => dispatch(actions.init_cards())
    }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Carts);
+export default connect(mapStateToProps, mapDispatchToProps)(Cards);
