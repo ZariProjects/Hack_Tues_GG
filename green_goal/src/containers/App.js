@@ -3,11 +3,12 @@ import './App.css';
 import Cards from './Cards/Cards';
 import Navbar from "../components/NavigationBar/NavigationBar"
 import {
-  BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
+import Settings from './Settings/Settings';
+import SignUp from './SignUp/SignUp';
+import Profile from './Profile/Profile';
 
 class App extends Component {
   render () {
@@ -15,6 +16,9 @@ class App extends Component {
       <div className="App">
         <Navbar/>
         <Switch >
+            <Route path="/profile" component={Profile} />
+            <Route path="/sign_up" component={SignUp} />
+            <Route path="/settings" component={Settings}/>
             <Route path="/" exact component={Cards} />
         </Switch >
         

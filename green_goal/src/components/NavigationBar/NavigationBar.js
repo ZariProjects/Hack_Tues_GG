@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import {MenuItems} from './MenuItems'
-import { Button } from '../Button/Button'
 import './NavigationBar.css'
 import { NavLink } from 'react-router-dom';
 
