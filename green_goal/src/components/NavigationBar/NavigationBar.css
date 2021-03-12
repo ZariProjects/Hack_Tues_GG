@@ -27,9 +27,6 @@ li a
 
 a:link
 {
-<<<<<<< HEAD
-    color:white;
-=======
     align-self: center;
     padding: 5px;
     border: 1px solid black;
@@ -37,7 +34,6 @@ a:link
     background-color:rgb(134, 247, 134);
     color: white;
     font-size: 20px;
->>>>>>> 6ce306c04211fad6be7442be83aebb9d95b79430
 }
 
 a:visited
