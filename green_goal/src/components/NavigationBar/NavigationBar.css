@@ -2,7 +2,7 @@
 {
     display: flex;
     justify-content: space-between;
-    background-color: rgba(50, 20, 70, 0.3);
+    background-color: rgb(80, 235, 80);
     font-size: 20px;
 }
 
@@ -28,8 +28,8 @@ button
     align-self: center;
     padding: 5px;
     border: 1px solid black;
-    border-radius: 10px;
-    background-color: royalblue;
+    border-radius: 5px;
+    background-color:rgb(134, 247, 134);
     color: white;
     font-size: 20px;
 }
@@ -37,6 +37,11 @@ button
 a:link
 {
     color:white;
+}
+
+a:visited
+{
+    color: white;
 }
 
 a:hover
