@@ -45,7 +45,7 @@ a:link
 
 a:visited
 {
-    color:white;
+    color:rgb(64, 255, 64);
 }
 
 a:hover, button:hover
