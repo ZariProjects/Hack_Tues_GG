@@ -19,14 +19,14 @@ class Login extends Component {
                             <label>Password</label>
                             <input type="password" required></input>
                             <div class="forgot-pass">
-                                <a href="#">Forgot Password?</a>
+                                <a class="underline" href="#">Forgot Password?</a>
                             </div>
                             <div class="btn">
                                 <div class="inner"></div>
                                 <button type="submit"><span>login</span></button>
                             </div>
                             <div class="signup-link">
-                                Not a member? <a href="#">Signup now</a>
+                                Not a member? <a class="underline" href="#">Signup now</a>
                             </div>
                         </div>
                     </form>

@@ -9,13 +9,13 @@ class Navbar extends Component {
             <nav className = "NavbarItems">
                 <h1>GreenGoal</h1>
                 <ul>
-                <li><NavLink to="/" exact activeClassName="active">Home</NavLink></li>
+                <li><NavLink to="/" exact activeClassName="active">Home </NavLink></li>
                 <li><NavLink to="/profile" activeClassName="active">Profile</NavLink></li>
                 <li><NavLink to="/cart" activeClassName="active">Cart</NavLink></li>
                 <li><NavLink to="/settings" activeClassName="active">Settings</NavLink></li>
                 </ul>
-                <NavLink to="/sign_up">Sign Up</NavLink>
-                <NavLink to="/log_in">Log In</NavLink>
+                <NavLink to="/sign_up" activeClassName="active">Sign Up</NavLink>
+                <NavLink to="/log_in" activeClassName="active">Log In</NavLink>
                 
             </nav>
         )
