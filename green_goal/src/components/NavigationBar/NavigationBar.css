@@ -45,7 +45,7 @@ a:link
     font-size: 20px;
 }
 
-a:visited
+a
 {
     color:rgb(64, 255, 64);
 }
@@ -76,4 +76,16 @@ h1
 }
 *{
     text-decoration: none;
+}
+
+.active{
+    border-bottom: 3px solid #fbfbfb;
+    transition: border-bottom .5s ease-in-out;
+    color: #f6f6f6;
+  }
+
+.active{
+    border-bottom: 3px solid #fbfbfb;
+    transition: border-bottom .5s ease-in-out;
+    color: #f6f6f6;
 }
