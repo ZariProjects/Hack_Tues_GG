@@ -1,0 +1,46 @@
+.NavbarItems
+{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(50, 20, 70, 0.3);
+    font-size: 20px;
+}
+
+.menu-icon
+{
+    display: none;
+}
+
+ul li
+{
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px;
+}
+
+li a
+{
+    text-decoration: none;
+}
+
+button
+{
+    align-self: center;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: royalblue;
+    color: white;
+    font-size: 20px;
+}
+
+a:link
+{
+    color:white;
+}
+
+a:hover
+{
+    color: black;
+    transition: all 1s ease;
+}
