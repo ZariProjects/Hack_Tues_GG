@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Thasadith&display=swap');
+
 .NavbarItems
 {
     display: flex;
     justify-content: space-around;
     background-color: black;
+    font-family: 'Thasadith', sans-serif;
+    position: fixed;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .menu-icon
@@ -58,6 +64,7 @@ button
     background-color: black;
     color:rgb(64, 255, 64);
     font-size: 20px;
+    font-family: 'Thasadith', sans-serif;
     cursor:pointer;
 }
 
