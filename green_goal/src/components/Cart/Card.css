@@ -5,13 +5,14 @@
     height: 310px;
     width: 480px;
     display: inline-flex;
+    -webkit-transition: padding 0.7s;
 }
 
 .Border:hover
 {
-    box-shadow: 1px 1px 2px rgb(202, 199, 199);
-    padding: 5px;
-    transition: all 1s;
+    box-shadow: 4px 4px 2px rgb(202, 199, 199);
+    padding: 15px;
+    transition: all 0.7s;
 }
 
 .hr_text{
@@ -24,12 +25,14 @@
 }
 
 .Img{
-    border-right: 2px solid black;
+    border: 1px solid black;
     width: 60%;
-    height: 100%;
+    height: 99.8%;
+    transition: 0.7s;
 }
 
 .hr{
     width: 100%;
     height: 1px;
 }
+
