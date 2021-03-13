@@ -19,24 +19,9 @@ class Cards extends Component {
     render () {
         let cardsForU = (<h1>Loading...</h1>);
         if (this.props.cards) {
-            const cardsForUArray = [];
-            let keysForU = [];
-            for (let card in this.props.cards) {
-                console.log(card)
-                for (let key in card) {
-                    keysForU.push(
-                        
-                        key
-                    )
-                    console.log(key)
-                    
-                }
-                console.log(keysForU)
-                cardsForUArray.push({
-                    card: keysForU
-                })
-                keysForU = []
-            }
+            console.log(this.props.cards)
+            const cardsForUArray = Object.values(this.props.cards);
+            console.log(cardsForU)
             cardsForU = cardsForUArray.map(card => (
                         <Card
                         key={Math.random() * 1000000} 

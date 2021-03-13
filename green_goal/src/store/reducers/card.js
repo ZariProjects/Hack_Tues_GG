@@ -8,14 +8,7 @@ const initialState = {
 
 const setCards = (state, action) => {
     return updateObject( state, {
-        cards: {
-            img: action.cards.img,
-            isCertified: action.cards.isCertified,
-            priceOne: action.cards.priceOne,
-            rating: action.cards.rating,
-            productName: action.cards.productName,
-            sellerName: action.cards.sellerName
-        },
+        cards: action.cards,
         error: false
     } );
 };
