@@ -12,16 +12,13 @@ class Cards extends Component {
 
     componentDidMount () {
         this.props.onCardInit()
-        console.log(this.props.cards);
-        
     }
     
     render () {
         let cardsForU = (<h1>Loading...</h1>);
+
         if (this.props.cards) {
-            console.log(this.props.cards)
             const cardsForUArray = Object.values(this.props.cards);
-            console.log(cardsForUArray)
             cardsForU = cardsForUArray.map(card => (
                         <Card
                         key={Math.random() * 1000000} 
@@ -30,11 +27,11 @@ class Cards extends Component {
                         productName={card.productName}
                         sellerName={card.sellerName}
                         rating={
-                            <sapn class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            </sapn>
+                            <span className="rating">
+                            <i className="fa fa-star"></i>
+                            <i className="fa fa-star"></i>
+                            <i className="fa fa-star"></i>
+                            </span>
                         }
                         price={card.priceOne} 
                         isCertified={card.isCertified}
@@ -52,7 +49,8 @@ class Cards extends Component {
 
 const mapStateToProps = state => {
     return {
-        cards: state.card.cards
+        cards: state.card.cards,
+        user: state.auth.user
     };
 };
 

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './SignIn.css';
 import { NavLink } from 'react-router-dom';
-import firebase from 'firebase';
+import { connect } from 'react-redux';
+import * as actions from '../../store/actions/index';
 
 class Login extends Component {
 
@@ -11,20 +12,15 @@ class Login extends Component {
         password: null
     }
 
-    onSubmitSignUp (event, email, password) {
-        firebase.auth().signInWithEmailAndPassword(email, password)
-        .then((userCredential) => {
-            // Signed in
-            var user = userCredential.user;
-            console.log(user)
-            // ...
-        })
-        .catch((error) => {
-            var errorCode = error.code;
-            var errorMessage = error.message;
-        });
-        
+    componentDidMount = () => {
+    }
 
+    onSubmitSignUp (event, email, password) {
+        event.preventDefault();
+        this.props.onSignIn(email, password)
+        
+        console.log(this.props.user)
+        this.props.history.push('/')
     }
 
     inputEmailChangedHandler(event) {
@@ -53,7 +49,7 @@ class Login extends Component {
         return (
 
             <div className="center">
-
+                
                 <div className="container">
                     <div className="text">
                         Sign In</div>
@@ -67,12 +63,13 @@ class Login extends Component {
                             <label>Password</label>
                             <input onChange={(event) => this.inputPassChangedHandler(event, this.state.password)}type="password" required ></input>
                             <div className="forgot-pass">
-                                <a class="underline" href="https://www.youtube.com/results?search_query=how+to+remember+my+password">Forgot Password?</a>
+                                <a className="underline" href="https://www.youtube.com/results?search_query=how+to+remember+my+password">Forgot Password?</a>
                             </div>
                             <div className="btn">
                                 <div className="inner"></div>
                                 <button type="submit"><span>sign in</span></button>
                             </div>
+                            
                             <div className="signup-link">
                                 Not a member?
                                 <NavLink to="/sign_up">Sign Up now</NavLink>
@@ -85,4 +82,16 @@ class Login extends Component {
     }
 }
 
-export default Login;
+const mapStateToProps = state => {
+    return {
+        user: state.auth.user
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        onSignIn: (email, password) => dispatch(actions.signIn(email, password))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
