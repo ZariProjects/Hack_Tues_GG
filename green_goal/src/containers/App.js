@@ -13,16 +13,17 @@ import Settings from './Settings/Settings';
 import SignUp from './SignUp/SignUp';
 import Profile from './Profile/Profile';
 import SignIn from './SignIn/SignIn';
-import Achievements from './Achievements/Achievements';
+import Achievements from './Achievements/Аchievements';
+import Home from './Home/Home';
 
 class App extends Component {
   render () {
     let routes = (
       <Switch>
-        <Route path="/" exact component={Cards} />
+        <Route path="/" exact component={Home} />
         <Route path="/achievements" component={Achievements}/>
         <Route path="/profile" component={Profile} />
-        
+        <Route path="/cards" compononent={Home} />
         <Route path="/settings" component={Settings}/>
         <Redirect to="/" />
       </Switch>
