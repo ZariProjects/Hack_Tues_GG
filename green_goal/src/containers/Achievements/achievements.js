@@ -1,7 +1,27 @@
-import React, { Component } from 'react';
+import React, { Component, useState} from 'react';
 import "./Achievements.css";
 
 class Achievements extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+          buttonDisabled: false
+        }
+    };
+    /*state = {
+        isDisabled : false
+    }*/
+    
+   /*
+    clicked (){
+        const isDisabled = true 
+        this.setstate({isDisabled:isDisabled});
+    }*/
+    clicked(){
+        console.log("dfhsjfhaslhsdf")
+        this.setState({buttonDisabled:true})
+    }
+
     render() {
         return (
             <div className="Achievements">
@@ -19,7 +39,7 @@ class Achievements extends Component {
                             </div>
                             <p>Planting a tree is a lifelong investment.</p>
                             <div class="bottom">
-                                <a href="#">Achive</a>
+                                <button disabled={this.state.buttonDisabled} onClick = {()=>this.clicked()} >Achievе</button>
                             </div>
                         </section>
                     </div>
@@ -32,7 +52,7 @@ class Achievements extends Component {
                             </div>
                             <p>Planting a tree is a lifelong investment.</p>
                             <div class="bottom">
-                                <a href="#">Achive</a>
+                                <button disabled={this.state.buttonDisabled} onClick = {()=>this.clicked()} >Achievе</button>
                             </div>
                         </section>
                     </div>
@@ -45,7 +65,7 @@ class Achievements extends Component {
                             </div>
                             <p>Planting a tree is a lifelong investment.</p>
                             <div class="bottom">
-                                <a href="#">Achive</a>
+                                <button disabled={this.state.buttonDisabled} onClick = {()=>this.clicked()} >Achievе</button>
                             </div>
                         </section>
                     </div>
@@ -58,7 +78,7 @@ class Achievements extends Component {
                             </div>
                             <p>Planting a tree is a lifelong investment. .</p>
                             <div class="bottom">
-                                <a href="#">Achive</a>
+                                <button disabled={this.state.buttonDisabled} onClick = {()=>this.clicked()} >Achievе</button>
                             </div>
                         </section>
                     </div>
@@ -71,7 +91,7 @@ class Achievements extends Component {
                             </div>
                             <p>Planting a tree is a lifelong investment. .</p>
                             <div class="bottom">
-                                <a href="#">Achive</a>
+                                <button disabled={this.state.buttonDisabled} onClick = {()=>this.clicked()} >Achievе</button>
                             </div>
                         </section>
                     </div>
@@ -84,7 +104,7 @@ class Achievements extends Component {
                             </div>
                             <p>Planting a tree is a lifelong investment. .</p>
                             <div class="bottom">
-                                <a href="#">Achive</a>
+                                <button disabled={this.state.buttonDisabled} onClick = {()=>this.clicked()} >Achievе</button>
                             </div>
                         </section>
                     </div>
