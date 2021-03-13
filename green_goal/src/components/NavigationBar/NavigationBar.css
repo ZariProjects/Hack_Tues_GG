@@ -69,3 +69,10 @@ h1
     transition: border-bottom .5s ease-in-out;
     color: #f6f6f6;
 }
+
+.sep{
+    margin-right: 15px;
+}
+.sep_1{
+    margin-right: 50px;
+}
