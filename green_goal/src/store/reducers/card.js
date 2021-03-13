@@ -1,20 +1,35 @@
 import * as actionTypes from '../actions/actionTypes';
-
+import { updateObject } from '../utility';
 
 const initialState = {
-    cards: null
+    cards: null,
+    error: false
 };
 
+const setCards = (state, action) => {
+    return updateObject( state, {
+        cards: {
+            img: action.cards.img,
+            isCertified: action.cards.isCertified,
+            priceOne: action.cards.priceOne,
+            rating: action.cards.rating,
+            productName: action.cards.productName,
+            sellerName: action.cards.sellerName
+        },
+        error: false
+    } );
+};
 
+const fetchCardsFailed = (state, action) => {
+    return updateObject( state, { error: true } );
+};
 
-export const cardReducer = (state=initialState, action) => {
-    switch(action.type) {
-        case actionTypes.GET_CARD_START:
-            return {
-                ...state
-            }
-
-        default:
-            return state
+const reducer = ( state = initialState, action ) => {
+    switch ( action.type ) {
+        case actionTypes.SET_CARDS: return setCards(state, action);    
+        case actionTypes.FETCH_CARDS_FAILED: return fetchCardsFailed(state, action);
+        default: return state;
     }
-}
+};
+
+export default reducer;

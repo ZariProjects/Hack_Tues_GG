@@ -1,53 +1,27 @@
-//import cors from 'cors';
-//import mongoose from 'mongoose';
 import * as actionTypes from './actionTypes';
-//import express from 'express';
-///import cardRouter from '../routes/cardRoute';
-//import axios from 'axios';
+import axios from '../../axios-instance';
 
-//const app = express();
-
-
-export const set_cards = (cardData) => {
+export const setCards = ( cards ) => {
     return {
-        type: actionTypes.GET_CARD_START
+        type: actionTypes.SET_CARDS,
+        cards: cards
     };
 };
 
-export const init_cards_start = (cardData) => {
+export const fetchCardsFailed = () => {
     return {
-        type: actionTypes.INIT_CARDS
+        type: actionTypes.FETCH_CARDS_FAILED
     };
 };
 
-export const init_cards = () => {
-    return {
-        type: actionTypes.INIT_CARDS
-    };}/* dispatch => {
-        app.use(cors());
-        app.use(express.json());
-        mongoose.connect('mongodb+srv://lacho:lacho123@cluster1.horty.mongodb.net/green_goal_main_db');
-        app.use('/', cardRouter)
-        app.listen(3001, () => {
-            console.log('Express baby');
-        })
-        const NewNote = {
-            id: Math.random()*1000,
-            isCertified: true,
-            productName: "Dinq",
-            sellerName: "Gancho",
-            rating: Math.random()*10,
-            price: Math.random()*5,
-            img: 5
-        }
-        axios.post('http://localhost:3001/cards', NewNote)
-
-        dispatch(init_cards_start());
-        await mongoose.connect('mongodb://localhost/my_database', {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-            useFindAndModify: false,
-            useCreateIndex: true
-        });
+export const initCards = () => {
+    return dispatch => {
+        axios.get( 'https://green-goal-5234f-default-rtdb.firebaseio.com/cards.json')
+            .then( response => {
+               dispatch(setCards(response.data));
+            } )
+            .catch( error => {
+                dispatch(fetchCardsFailed());
+            } );
     };
-};}}*/
+};
