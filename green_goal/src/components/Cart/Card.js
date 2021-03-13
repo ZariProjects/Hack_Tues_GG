@@ -9,7 +9,7 @@ const card = (props) => {
             <div className = "Text">
                 <p className = "hr_text">{props.productName}</p>
                 <p className = "hr_text">{props.sellerName}</p>
-                <p className = "hr_text">{props.rating}/10</p>
+                <p className = "hr_text">{props.rating}</p>
                 <p className = "hr_text">{props.price}lv</p>
                 {certification}      
             </div>      

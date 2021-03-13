@@ -29,12 +29,17 @@ class Cards extends Component {
                         img={card.img}
                         productName={card.productName}
                         sellerName={card.sellerName}
-                        rating={card.rating}
+                        rating={
+                            <sapn class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            </sapn>
+                        }
                         price={card.priceOne} 
                         isCertified={card.isCertified}
                             />
                         ));
-            
         }
         return (
             <div>

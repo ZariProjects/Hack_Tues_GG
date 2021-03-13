@@ -12,8 +12,9 @@ import { connect } from 'react-redux';
 import Settings from './Settings/Settings';
 import SignUp from './SignUp/SignUp';
 import Profile from './Profile/Profile';
-import Login from './SignIn/Signin';
+import SignIn from './SignIn/Signin';
 import * as actions from '../store/actions/index';
+import Achievements from './Achievements/Achievements';
 
 class App extends Component {
   render () {
@@ -27,7 +28,8 @@ class App extends Component {
     //if ( this.props.isAuthenticated ) {
       routes = (
         <Switch >
-          <Route path="/sign_in" component={Login} />
+          <Route path="/sign_in" component={SignIn} />
+          <Route path="/achievements" component={Achievements}/>
           <Route path="/profile" component={Profile} />
           <Route path="/sign_up" component={SignUp} />
           <Route path="/settings" component={Settings}/>
