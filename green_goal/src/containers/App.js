@@ -12,7 +12,7 @@ import { connect } from 'react-redux';
 import Settings from './Settings/Settings';
 import SignUp from './SignUp/SignUp';
 import Profile from './Profile/Profile';
-import SignIn from './SignIn/Signin';
+import SignIn from './SignIn/SignIn';
 import * as actions from '../store/actions/index';
 import Achievements from './Achievements/Achievements';
 

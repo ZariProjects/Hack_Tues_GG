@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Signin.css';
+import './SignIn.css';
 import { NavLink } from 'react-router-dom';
 import firebase from 'firebase';
 
@@ -71,7 +71,7 @@ class Login extends Component {
                             </div>
                             <div className="btn">
                                 <div className="inner"></div>
-                                <button type="submit"><span>login</span></button>
+                                <button type="submit"><span>sign in</span></button>
                             </div>
                             <div className="signup-link">
                                 Not a member?
