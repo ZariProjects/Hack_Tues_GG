@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import Card from '../../components/Cart/Card';
-import img from './SampleImgDeleteLater.png';
+//import img from './SampleImgDeleteLater.png';
 import * as actions from '../../store/actions';
 import {connect} from 'react-redux';
-import axios from 'axios';
 
 class Cards extends Component {
     
@@ -12,89 +11,50 @@ class Cards extends Component {
     }
 
     componentDidMount () {
-        
+        this.props.onCardInit()
+        console.log(this.props.cards);
         
     }
     
     render () {
+        let cardsForU = (<h1>Loading...</h1>);
+        if (this.props.cards) {
+            console.log(this.props.cards)
+            const cardsForUArray = Object.values(this.props.cards);
+            console.log(cardsForUArray)
+            cardsForU = cardsForUArray.map(card => (
+                        <Card
+                        key={Math.random() * 1000000} 
+                        clicked={this.onClickHandler}
+                        img={card.img}
+                        productName={card.productName}
+                        sellerName={card.sellerName}
+                        rating={card.rating}
+                        price={card.priceOne} 
+                        isCertified={card.isCertified}
+                            />
+                        ));
+            
+        }
         return (
-            <div className="Cards">
-                <Card
-                clicked={this.onClickHandler}
-                isCertified={false}
-                productName="Qbylka"
-                sellerName="Dqdo Stawri"
-                rating={
-                    <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    </div>
-                }
-                price={10}
-                img={img}/>
-
-                <Card
-                clicked={this.onClickHandler}
-                isCertified={true}
-                productName="Dinq"
-                sellerName="Organic Food Corp Vratsa"
-                rating={11}
-                price={4}
-                img={img}/>
-
-                <Card
-                clicked={this.onClickHandler}
-                isCertified={false}
-                productName="Kruha"
-                sellerName="Baba Nqdq"
-                rating={6.6}
-                price={3}
-                img={img}/>
-
-<Card
-                clicked={this.onClickHandler}
-                isCertified={false}
-                productName="Kruha"
-                sellerName="Baba Nqdq"
-                rating={6.6}
-                price={3}
-                img={img}/>
-
-<Card
-                clicked={this.onClickHandler}
-                isCertified={false}
-                productName="Kruha"
-                sellerName="Baba Nqdq"
-                rating={6.6}
-                price={3}
-                img={img}/>
-
-<Card
-                clicked={this.onClickHandler}
-                isCertified={false}
-                productName="Kruha"
-                sellerName="Baba Nqdq"
-                rating={6.6}
-                price={3}
-                img={img}/>
-
+            <div>
+                {cardsForU}
             </div>
+            
         );
     }
 };
-/*
+
 const mapStateToProps = state => {
     return {
-        cards: state.card.cardData
+        cards: state.card.cards
     };
 };
 
 const mapDispatchToProps = dispatch => {
    return {
-       //onCardInit: () => dispatch(actions.init_cards())
-   }
-};*/
+       onCardInit: () => dispatch(actions.initCards())
+   };
+};
 
-export default Cards;//connect(mapStateToProps, mapDispatchToProps)(Cards);
+export default connect(mapStateToProps, mapDispatchToProps)(Cards);

@@ -1,18 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './containers/App';
-import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
-import {cardReducer} from './store/reducers/card';
 import thunk from 'redux-thunk';
+
+import './index.css';
+import App from './containers/App';
+
+import cardReducer from './store/reducers/card';
+import orderReducer from './store/reducers/order';
+import authReducer from './store/reducers/auth';
+import firebase from 'firebase';
+
+firebase.initializeApp({
+  apiKey: "AIzaSyBVrtDmXuWf_1soIcgkMHGqtyK0OAfCmCg",
+  authDomain: "green-goal-5234f.firebaseapp.com",
+  projectId: "green-goal-5234f",
+  storageBucket: "green-goal-5234f.appspot.com",
+  messagingSenderId: "402826671794",
+  appId: "1:402826671794:web:b704c25a1217445d7c3bab",
+  measurementId: "G-JBGCZGYQ0Q"
+})
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
-  card: cardReducer
+  card: cardReducer,
+  order: orderReducer,
+  auth: authReducer
 });
 
 const store = createStore(rootReducer, composeEnhancers(
@@ -35,4 +51,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-reportWebVitals();
