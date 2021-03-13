@@ -12,9 +12,10 @@ import { connect } from 'react-redux';
 import Settings from './Settings/Settings';
 import SignUp from './SignUp/SignUp';
 import Profile from './Profile/Profile';
-import SignIn from './SignIn/SignIn';
-import Achievements from './Achievements/Аchievements';
+import Achievements from './Achievements/Achievements';
 import Home from './Home/Home';
+import SignIn from './SignIn/SignIn';
+import Cart from './Cart/Cart';
 
 class App extends Component {
   render () {
@@ -23,8 +24,9 @@ class App extends Component {
         <Route path="/" exact component={Home} />
         <Route path="/achievements" component={Achievements}/>
         <Route path="/profile" component={Profile} />
-        <Route path="/cards" compononent={Home} />
+        <Route path="/cards" component={Cards} />
         <Route path="/settings" component={Settings}/>
+        <Route path="/cart" component={Cart}/>
         <Redirect to="/" />
       </Switch>
     );
@@ -34,8 +36,8 @@ class App extends Component {
         <Switch >
           <Route path="/sign_in" component={SignIn} />
           <Route path="/sign_up" component={SignUp} />
-          <Route path="/" exact component={Cards} />
-          
+          <Route path="/" exact component={Home} />
+          <Redirect to="/" />
         </Switch >
         
       );

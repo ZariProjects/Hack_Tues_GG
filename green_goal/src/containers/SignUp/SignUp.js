@@ -16,10 +16,12 @@ class SignUp extends Component {
         event.preventDefault();
         if (password === passwordConfirm){
             this.props.onSignUp(email, password)
-            this.props.history.push('/')
+            if (this.props.error) {
+                alert(this.props.error);
+            }
         }
-        else {
-            alert('Passwords Don`t Match')
+        if (this.props.user) {
+            this.props.history.push("/");
         }
 
     }
@@ -78,10 +80,18 @@ class SignUp extends Component {
     }
 }
 
+
+const mapStateToProps = state => {
+    return {
+        user: state.auth.user,
+        error: state.auth.error,
+    }
+}
+
 const mapDispatchToProps = dispatch => {
     return {
         onSignUp: (email, password) => dispatch(actions.signUp(email, password))
     }    
 }
 
-export default connect(null, mapDispatchToProps)(SignUp);
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp);

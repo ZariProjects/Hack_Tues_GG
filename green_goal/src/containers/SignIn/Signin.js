@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import './SignIn.css';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -7,12 +8,10 @@ import * as actions from '../../store/actions/index';
 class SignIn extends Component {
 
     
+
     state = {
         email: null,
         password: null
-    }
-
-    componentDidMount = () => {
     }
 
     onSubmitSignUp (event, email, password) {
@@ -84,7 +83,8 @@ class SignIn extends Component {
 
 const mapStateToProps = state => {
     return {
-        user: state.auth.user
+        user: state.auth.user,
+        error: state.auth.error,
     }
 }
 

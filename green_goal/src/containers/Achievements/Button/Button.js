@@ -1,4 +1,4 @@
-import e from 'cors';
+import './Button.css'
 import React, { Component } from 'react';
 
 class Button extends Component {
@@ -14,7 +14,7 @@ class Button extends Component {
 
     render () {
         return (
-            <button onClick={this.clicked} disabled={this.state.isDisabled}>CLICK ME</button>
+            <button onClick={this.clicked} disabled={this.state.isDisabled}>{this.props.children}</button>
         );
     }
 }
