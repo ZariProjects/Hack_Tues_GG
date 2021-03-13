@@ -3,7 +3,7 @@ import './SignIn.css';
 import { NavLink } from 'react-router-dom';
 import firebase from 'firebase';
 
-class Login extends Component {
+class SignIn extends Component {
 
     
     state = {
@@ -85,4 +85,4 @@ class Login extends Component {
     }
 }
 
-export default Login;
+export default SignIn;
