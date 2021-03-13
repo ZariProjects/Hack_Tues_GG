@@ -21,16 +21,17 @@ class Cards extends Component {
         if (this.props.cards) {
             console.log(this.props.cards)
             const cardsForUArray = Object.values(this.props.cards);
-            console.log(cardsForU)
+            console.log(cardsForUArray)
             cardsForU = cardsForUArray.map(card => (
                         <Card
                         key={Math.random() * 1000000} 
                         clicked={this.onClickHandler}
                         img={card.img}
                         productName={card.productName}
-                        sellerNsame={card.sellerName}
+                        sellerName={card.sellerName}
                         rating={card.rating}
-                        price={card.price} 
+                        price={card.priceOne} 
+                        isCertified={card.isCertified}
                             />
                         ));
             

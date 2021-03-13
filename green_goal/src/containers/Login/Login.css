@@ -8,7 +8,6 @@
 body{
   height: 100vh;
   width: 100%;
-  background: linear-gradient(115deg, #b0f59fce 10%, #57f352 90%);
 }
 
 .show-btn, .container{
