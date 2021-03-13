@@ -19,7 +19,6 @@ class Navbar extends Component {
                 {!this.props.user ? <NavLink to="/sign_up" activeClassName="active" className = "sep">Sign Up</NavLink> : null}
                 {!this.props.user ? <NavLink to="/sign_in" activeClassName="active" className = "sep_1">Sign In</NavLink> : null}
                 {this.props.user ? <NavLink to="/profile" activeClassName="active"><i className="fa fa-user" aria-hidden="true"></i></NavLink> : null}
-                {this.props.user ? <NavLink to="/settings" activeClassName="active"><i className="fa fa-cog" aria-hidden="true"></i></NavLink> : null}
                 
             </nav>
         )
