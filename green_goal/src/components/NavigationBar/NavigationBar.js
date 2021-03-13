@@ -12,7 +12,7 @@ class Navbar extends Component {
                 <li><NavLink to="/" exact activeClassName="active">Home </NavLink></li>
                 <li><NavLink to="/profile" activeClassName="active">Profile</NavLink></li>
                 <li><NavLink to="/cart" activeClassName="active">Cart</NavLink></li>
-                <li><NavLink to="/settings" activeClassName="active">Settings1</NavLink></li>
+                <li><NavLink to="/settings" activeClassName="active">Settings</NavLink></li>
                 </ul>
                 <NavLink to="/sign_up" activeClassName="active" className = "sep">Sign Up</NavLink>
                 <NavLink to="/log_in" activeClassName="active" className = "sep_1">Log In</NavLink>
