@@ -23,7 +23,8 @@ body{
   width: 410px;
   padding: 30px;
   height: 480px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  box-shadow: 15px 15px 20px rgba(11, 98, 3, 0.342);
+  border-radius: 13%  1%  13%   1%;
 }
 
 .container .text{
@@ -87,9 +88,11 @@ form .btn .inner{
   background: -webkit-linear-gradient(right, #a7f3a4, #258d0a, #18ec2a, #0e6103);
   transition: all 0.4s;
 }
+
 form .btn:hover .inner{
   left: 0;
 }
+
 form .btn button{
   height: 100%;
   width: 100%;

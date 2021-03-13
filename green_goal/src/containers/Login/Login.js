@@ -13,11 +13,12 @@ class Login extends Component {
                     <form action="#">
                         <div class="data">
                             <label>Email or Phone</label>
-                            <input type="text" required></input>
+                            <input type="text" required>
+                            </input>
                         </div>
                         <div class="data">
                             <label>Password</label>
-                            <input type="password" required></input>
+                            <input type="password" required ></input>
                             <div class="forgot-pass">
                                 <a class="underline" href="#">Forgot Password?</a>
                             </div>

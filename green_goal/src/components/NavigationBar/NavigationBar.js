@@ -14,9 +14,9 @@ class Navbar extends Component {
                 <li><NavLink to="/cart" activeClassName="active">Cart</NavLink></li>
                 <li><NavLink to="/settings" activeClassName="active">Settings</NavLink></li>
                 </ul>
-                <NavLink to="/sign_up" activeClassName="active">Sign Up</NavLink>
-                <NavLink to="/log_in" activeClassName="active">Log In</NavLink>
-                
+
+                <NavLink class="right" to="/sign_up" activeClassName="active">Sign Up</NavLink>
+                <NavLink class="right" to="/log_in" activeClassName="active">Log In</NavLink>
             </nav>
         )
         
