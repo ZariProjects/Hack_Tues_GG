@@ -1,0 +1,33 @@
+Button{
+    background: #369e0c;
+    color: #fff;
+    padding: 7px 15px;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+Button:disabled {
+    background: #7a976f;
+    color: #fff;
+    padding: 7px 15px;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+Button:hover{
+    transform: scale(0.97);
+    background-color: rgb(58, 184, 41);
+}
+
+Button:hover:disabled{
+    transform: none;
+    background-color: #7a976f;
+}

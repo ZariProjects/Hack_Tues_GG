@@ -12,33 +12,36 @@ import { connect } from 'react-redux';
 import Settings from './Settings/Settings';
 import SignUp from './SignUp/SignUp';
 import Profile from './Profile/Profile';
-import SignIn from './SignIn/SignIn';
-import * as actions from '../store/actions/index';
 import Achievements from './Achievements/Achievements';
+import Home from './Home/Home';
+import SignIn from './SignIn/SignIn';
+import Cart from './Cart/Cart';
 
 class App extends Component {
   render () {
     let routes = (
       <Switch>
-        <Route path="/" exact component={Cards} />
+        <Route path="/" exact component={Home} />
+        <Route path="/achievements" component={Achievements}/>
+        <Route path="/profile" component={Profile} />
+        <Route path="/cards" component={Cards} />
+        <Route path="/settings" component={Settings}/>
+        <Route path="/cart" component={Cart}/>
         <Redirect to="/" />
       </Switch>
     );
 
-    //if ( this.props.isAuthenticated ) {
+    if ( !this.props.isAuthenticated ) {
       routes = (
         <Switch >
           <Route path="/sign_in" component={SignIn} />
-          <Route path="/achievements" component={Achievements}/>
-          <Route path="/profile" component={Profile} />
           <Route path="/sign_up" component={SignUp} />
-          <Route path="/settings" component={Settings}/>
-          <Route path="/" exact component={Cards} />
-         { //<Redirect to="/"/>}
-          }
+          <Route path="/" exact component={Home} />
+          <Redirect to="/" />
         </Switch >
+        
       );
-    //}
+    }
 
     return (
       <div className="App">
@@ -56,14 +59,10 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
-    isAuthenticated: state.auth.token !== null
+    isAuthenticated: state.auth.user !== null,
+    user: state.auth.user
   };
 };
 
-const mapDispatchToProps = dispatch => {
-  return {
-    onTryAutoSignup: () => dispatch( actions.authCheckState() )
-  };
-};
 
-export default withRouter( connect( mapStateToProps, mapDispatchToProps )( App ) );
+export default withRouter( connect( mapStateToProps)( App ) );

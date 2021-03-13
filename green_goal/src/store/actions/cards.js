@@ -18,7 +18,6 @@ export const initCards = () => {
     return dispatch => {
         axios.get( 'https://green-goal-5234f-default-rtdb.firebaseio.com/cards.json')
             .then( response => {
-                console.log(response.data);
                 dispatch(setCards(response.data));
             } )
             .catch( error => {

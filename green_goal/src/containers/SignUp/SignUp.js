@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './SignUp.css';
 import { NavLink } from 'react-router-dom';
-import firebase from 'firebase';
+import * as actions from '../../store/actions/index';
+import { connect } from 'react-redux';
 
 class SignUp extends Component {
 
@@ -14,20 +15,13 @@ class SignUp extends Component {
     onSubmitSignUp (event, email, password, passwordConfirm) {
         event.preventDefault();
         if (password === passwordConfirm){
-            firebase.auth().createUserWithEmailAndPassword(email, password)
-            .then((userCredential) => {
-                // Signed in 
-                var user = userCredential.user;
-                // ...
-            })
-            .catch((error) => {
-                var errorCode = error.code;
-                var errorMessage = error.message;
-        // ..
-            });
+            this.props.onSignUp(email, password)
+            if (this.props.error) {
+                alert(this.props.error);
+            }
         }
-        else {
-            alert('Passwords Don`t Match')
+        if (this.props.user) {
+            this.props.history.push("/");
         }
 
     }
@@ -86,4 +80,18 @@ class SignUp extends Component {
     }
 }
 
-export default SignUp;
+
+const mapStateToProps = state => {
+    return {
+        user: state.auth.user,
+        error: state.auth.error,
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        onSignUp: (email, password) => dispatch(actions.signUp(email, password))
+    }    
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp);

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./Achievements.css";
+import Button from './Button/Button';
 
 class Achievements extends Component {
     render() {
@@ -19,7 +20,7 @@ class Achievements extends Component {
                             </div>
                             <p>Planting a tree is a lifelong investment.</p>
                             <div className="bottom">
-                            <button>Achive</button>
+                            <Button>Achive</Button>
                             </div>
                         </section>
                     </div>
@@ -32,7 +33,7 @@ class Achievements extends Component {
                             </div>
                             <p>Planting a tree is a lifelong investment.</p>
                             <div className="bottom">
-                                <button>Achive</button>
+                                <Button>Achive</Button>
                             </div>
                         </section>
                     </div>
@@ -45,7 +46,7 @@ class Achievements extends Component {
                             </div>
                             <p>Planting a tree is a lifelong investment.</p>
                             <div className="bottom">
-                                <button>Achive</button>
+                                <Button>Achive</Button>
                             </div>
                         </section>
                     </div>
@@ -58,7 +59,7 @@ class Achievements extends Component {
                             </div>
                             <p>Planting a tree is a lifelong investment. .</p>
                             <div className="bottom">
-                                <button>Achive</button>
+                                <Button>Achive</Button>
                             </div>
                         </section>
                     </div>
@@ -71,7 +72,7 @@ class Achievements extends Component {
                             </div>
                             <p>Planting a tree is a lifelong investment. .</p>
                             <div className="bottom">
-                                <button>Achive</button>
+                                <Button>Achive</Button>
                             </div>
                         </section>
                     </div>
@@ -84,12 +85,12 @@ class Achievements extends Component {
                             </div>
                             <p>Planting a tree is a lifelong investment. .</p>
                             <div className="bottom">
-                                <button>Achive</button>
+                                <Button>Achive</Button>
                             </div>
                         </section>
                     </div>
                 </div>
-            </div >
+            </div>
         )
     }
 };
