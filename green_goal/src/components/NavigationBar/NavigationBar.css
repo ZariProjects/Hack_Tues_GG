@@ -45,29 +45,15 @@ a:link
     font-size: 20px;
 }
 
-a:visited
+a
 {
     color:rgb(64, 255, 64);
 }
 
-a:hover, button:hover
+a:hover
 {
     color: white;
     border-bottom: 3px solid white;
-    transition: all 0.5s ease;
-
-}
-
-button
-{
-    margin: 5px;
-    padding: 5px;
-    border: none;
-    background-color: black;
-    color:rgb(64, 255, 64);
-    font-size: 20px;
-    font-family: 'Thasadith', sans-serif;
-    cursor:pointer;
 }
 
 h1
@@ -76,4 +62,10 @@ h1
 }
 *{
     text-decoration: none;
+}
+
+.active{
+    border-bottom: 3px solid #fbfbfb;
+    transition: border-bottom .5s ease-in-out;
+    color: #f6f6f6;
 }

@@ -66,8 +66,10 @@ form .forgot-pass a{
   text-decoration: none;
   font-size: 17px;
 }
+
 form .forgot-pass a:hover{
   text-decoration: underline;
+  
 }
 form .btn{
   margin: 30px 0;
@@ -112,3 +114,4 @@ form .signup-link a{
 form .signup-link a:hover{
   text-decoration: underline;
 }
+
