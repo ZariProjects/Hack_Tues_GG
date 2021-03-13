@@ -24,7 +24,14 @@ class Cards extends Component {
                 isCertified={false}
                 productName="Qbylka"
                 sellerName="Dqdo Stawri"
-                rating={3}
+                rating={
+                    <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    </div>
+                }
                 price={10}
                 img={img}/>
 

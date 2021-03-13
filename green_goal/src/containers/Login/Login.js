@@ -9,12 +9,11 @@ class Login extends Component {
             <div class="center">
                 <div class="container">
                     <div class="text">
-                        Login Form</div>
+                        Login</div>
                     <form action="#">
                         <div class="data">
                             <label>Email or Phone</label>
-                            <input type="text" required>
-                            </input>
+                            <input type="text" required></input>
                         </div>
                         <div class="data">
                             <label>Password</label>
