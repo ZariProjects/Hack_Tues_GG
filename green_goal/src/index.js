@@ -12,6 +12,8 @@ import cardReducer from './store/reducers/card';
 import orderReducer from './store/reducers/order';
 import authReducer from './store/reducers/auth';
 import firebase from 'firebase';
+import 'firebase/auth';
+import "firebase/firestore";
 
 firebase.initializeApp({
   apiKey: "AIzaSyBVrtDmXuWf_1soIcgkMHGqtyK0OAfCmCg",

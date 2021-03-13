@@ -7,7 +7,7 @@ class Navbar extends Component {
     render() {
         return(
             <nav className = "NavbarItems">
-                <h1>GreenGoal</h1>
+                <img height="48px"src={'https://firebasestorage.googleapis.com/v0/b/green-goal-5234f.appspot.com/o/forUsDevs%2Fgreengoallogo.png?alt=media&token=d444e4a1-e329-4df0-a2c3-1d8ce2284f2d'} alt="Green Goal Logo"/>
                 <ul>
                 <li><NavLink to="/" exact activeClassName="active"><i class="fa fa-home" aria-hidden="true"></i></NavLink></li>
                 <li><NavLink to="/profile" activeClassName="active"><i class="fa fa-user" aria-hidden="true"></i></NavLink></li>
@@ -15,8 +15,9 @@ class Navbar extends Component {
                 <li><NavLink to="/settings" activeClassName="active"><i class="fa fa-cog" aria-hidden="true"></i></NavLink></li>
                 <li><NavLink to="/achievements" activeClassName="active"><i class="fa fa-trophy" aria-hidden="true"></i></NavLink></li>
                 </ul>
+                <NavLink to="/settings" activeClassName="active">Settings</NavLink>
                 <NavLink to="/sign_up" activeClassName="active" className = "sep">Sign Up</NavLink>
-                <NavLink to="/log_in" activeClassName="active" className = "sep_1">Log In</NavLink>
+                <NavLink to="/sign_in" activeClassName="active" className = "sep_1">Sign In</NavLink>
                 
             </nav>
         )
