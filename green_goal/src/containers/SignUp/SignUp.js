@@ -76,7 +76,7 @@ class SignUp extends Component {
                             </div>
                             <div className="signup-link">
                                 Already a member?
-                                <NavLink to="/log_in">Login now</NavLink>
+                                <NavLink to="/sign_in">Sign In Now</NavLink>
                             </div>
                         </div>
                     </form>

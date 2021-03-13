@@ -13,6 +13,11 @@
     margin-bottom: 20px;
 }
 
+.NavbarItems img {
+    margin: auto;
+    margin-left: 20px;
+}
+
 .menu-icon
 {
     display: none;
