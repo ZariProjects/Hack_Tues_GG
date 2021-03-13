@@ -14,6 +14,7 @@ import SignUp from './SignUp/SignUp';
 import Profile from './Profile/Profile';
 import Login from './Login/Login';
 import * as actions from '../store/actions/index';
+import Achievements from './Achievements/Achievements';
 
 class App extends Component {
   render () {
@@ -27,6 +28,7 @@ class App extends Component {
     //if ( this.props.isAuthenticated ) {
       routes = (
         <Switch >
+          <Route path="/achievements" component={Achievements}/>
           <Route path="/log_in" component={Login} />
           <Route path="/profile" component={Profile} />
           <Route path="/sign_up" component={SignUp} />
