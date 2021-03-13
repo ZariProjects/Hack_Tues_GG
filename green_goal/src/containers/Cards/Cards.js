@@ -47,10 +47,11 @@ class Cards extends Component {
             
         }
         return (
+            
             <div>
                 {cardsForU}
             </div>
-            
+
         );
     }
 };
