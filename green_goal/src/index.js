@@ -24,6 +24,7 @@ const app = (
     <BrowserRouter>
       <App />
     </BrowserRouter>
+    
   </Provider>
 );
 

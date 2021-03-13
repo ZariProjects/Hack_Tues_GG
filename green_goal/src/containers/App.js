@@ -13,6 +13,8 @@ import Login from './Login/Login';
 
 class App extends Component {
   render () {
+    
+
     return (
       <div className="App">
         <Navbar/>
@@ -27,6 +29,7 @@ class App extends Component {
           <Route path="/settings" component={Settings}/>
           <Route path="/" exact component={Cards} />
         </Switch >
+        
         
       </div>
     );

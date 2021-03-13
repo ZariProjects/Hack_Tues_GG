@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Login.css';
-
+import { NavLink } from 'react-router-dom';
 
 class Login extends Component {
     render() {
@@ -27,7 +27,8 @@ class Login extends Component {
                                 <button type="submit"><span>login</span></button>
                             </div>
                             <div class="signup-link">
-                                Not a member? <a class="underline" href="#">Signup now</a>
+                                Not a member?
+                                <NavLink to="/sign_up">Signup now</NavLink>
                             </div>
                         </div>
                     </form>
