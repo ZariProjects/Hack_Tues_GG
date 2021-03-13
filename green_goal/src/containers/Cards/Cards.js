@@ -6,13 +6,20 @@ import {connect} from 'react-redux';
 
 class Cards extends Component {
     
-    onClickHandler() {
-        alert('Dont Click My Apples');
-    }
+
 
     componentDidMount () {
         this.props.onCardInit()
     }
+    getStars(num){
+        let Star = []
+        for(let i = 1; i < num; i++){
+            Star.push(i); 
+        }
+
+        return Star;
+    }
+
     
     render () {
         let cardsForU = (<h1>Loading...</h1>);
@@ -27,16 +34,15 @@ class Cards extends Component {
                         productName={card.productName}
                         sellerName={card.sellerName}
                         rating={
-                            <span className="rating">
-                            <i className="fa fa-star"></i>
-                            <i className="fa fa-star"></i>
-                            <i className="fa fa-star"></i>
-                            </span>
+                            this.getStars(card.rating).map(star => (
+                                <span className="star"><i class="fa fa-star"></i></span>
+                            ) )
                         }
                         price={card.priceOne} 
                         isCertified={card.isCertified}
                             />
                         ));
+            
         }
         return (
             <div>

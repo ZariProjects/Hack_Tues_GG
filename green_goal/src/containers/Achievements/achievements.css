@@ -3,42 +3,61 @@
     scroll-behavior: smooth;
 }
 
+.Achievements h1{
+    color: #000000;
+    margin-top: -25px;
+    margin-bottom: 100px;
+    padding: 25px;
+    text-align: center;
+    background: #3abc1a;
+    color: white;
+    font-size: 30px;
+}
+
 ::selection{
     color: #fff;
-    background: #ff7979;
+    background: #c9f87d;
     
 }
 
 .wrapper{
     max-width: 1080px;
-    margin: 50px auto;
+    margin: 10px auto;
     padding: 0 20px;
     position: relative;
 }
+
 .wrapper .center-line{
     position: absolute;
     height: 100%;
     width: 4px;
-    background: #fff;
+    background: rgb(255, 255, 255);
     left: 50%;
     top: 20px;
     transform: translateX(-50%);
 }
+
 .wrapper .row{
     display: flex;
 }
+
 .wrapper .row-1{
     justify-content: flex-start;
+    margin-right: 80px;
 }
+
 .wrapper .row-2{
     justify-content: flex-end;
+    margin-left: 80px;
 }
+
 .wrapper .row section{
     background: #fff;
     border-radius: 5px;
     width: calc(50% - 40px);
     padding: 20px;
     position: relative;
+
 }.wrapper .row section::before{
     position: absolute;
     content: "";
@@ -64,9 +83,9 @@
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
-    color: #ff7979;
+    color: #2b8109;
     font-size: 17px;
-    box-shadow: 0 0 0 4px #fff, inset 0 2px 0 rgba(0,0,0,0.08), 0 3px 0 4px rgba(0,0,0,0.05);
+    box-shadow: 0 0 0 4px #ffffff, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 2px 0 4px rgba(5, 107, 13, 0.404);
 }
 .center-line .scroll-icon{
     bottom: 0px;
@@ -95,18 +114,21 @@
 .row section p{
     margin: 10px 0 17px 0;
   }
-.row section .bottom a{
-    text-decoration: none;
-    background: #ff7979;
+.row section .bottom button{
+    background: #369e0c;
     color: #fff;
     padding: 7px 15px;
     border-radius: 5px;
-    /* font-size: 17px; */
-    font-weight: 400;
+    font-size: 17px;
+    font-weight: 500;
     transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    
 }
-.row section .bottom a:hover{
+.row section .bottom button:hover{
     transform: scale(0.97);
+    background-color: rgb(58, 184, 41);
 }
 
 @media(max-width: 790px){
@@ -137,3 +159,4 @@
       margin: 10px 0;
     }
 }
+

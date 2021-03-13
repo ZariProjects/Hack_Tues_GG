@@ -42,7 +42,21 @@
     height: 1px;
 }
 
-.rating{
-    color: #49d830;
+
+
+
+.stars input{
+  display: none;
 }
+
+.stars label{
+    color: rgb(179, 179, 179);
+    margin: 0 1px;
+    font-size: 22px;
+}
+
+.star{
+    color:gold
+}
+
 

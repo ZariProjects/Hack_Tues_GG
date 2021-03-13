@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from '../../store/actions/index';
 
-class Login extends Component {
+class SignIn extends Component {
 
     
     state = {
