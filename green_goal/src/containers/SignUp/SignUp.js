@@ -12,69 +12,69 @@ class SignUp extends Component {
     }
 
     onSubmitSignUp (event, email, password, passwordConfirm) {
-        event.preventDefault()
-        if (password !== passwordConfirm){
+        event.preventDefault();
+        if (password === passwordConfirm){
+            firebase.auth().createUserWithEmailAndPassword(email, password)
+            .then((userCredential) => {
+                // Signed in 
+                var user = userCredential.user;
+                // ...
+            })
+            .catch((error) => {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+        // ..
+            });
+        }
+        else {
             alert('Passwords Don`t Match')
         }
-        firebase.auth().createUserWithEmailAndPassword(email, password)
-        .then((userCredential) => {
-            // Signed in 
-            var user = userCredential.user;
-            // ...
-        })
-        .catch((error) => {
-            var errorCode = error.code;
-            var errorMessage = error.message;
-    // ..
-  });
+
     }
 
     inputEmailChangedHandler(event) {
-        const updatedState = {
-            ...this.state,
+        const updatedEmail = {
             email: event.target.value
         }
-        this.setState({updatedState})
+        this.setState({...this.state, email: updatedEmail})
     }
 
     inputPassChangedHandler(event) {
-        const updatedState = {
-            ...this.state,
+        const updatedPass = {
             password: event.target.value
         }
-        this.setState({updatedState})
+        this.setState({...this.state, password: updatedPass})
     }
 
     inputPassConfChangedHandler(event) {
-        const updatedState = {
-            ...this.state,
+        const updatedPassConf = {
             passwordConfirm: event.target.value
         }
-        this.setState({updatedState})
+        this.setState({...this.state, passwordConfirm: updatedPassConf})
     }
 
     render () {
         return (
-            <div class="center">
-                <div class="container">
-                    <div class="text">
+            <div className="center">
+                <div className="container">
+                    <div className="text">
                         Sign Up</div>
-                    <form action="#" onSubmit={(event) => this.onSubmitSignUp(event, this.state.email, this.state.password, this.state.passwordConfirm)}>
-                        <div class="data">
+                    <form action="#" onSubmit={(event) => this.onSubmitSignUp(event, this.state.email.email, this.state.password.password, this.state.passwordConfirm.passwordConfirm)}>
+                        <div className="data">
                             <label>Email</label>
                             <input onChange={(event) => this.inputEmailChangedHandler(event)} type="email" required></input>
                         </div>
-                        <div class="data">
+                        <div className="data">
                             <label>Password</label>
                             <input onChange={(event) => this.inputPassChangedHandler(event)} type="password" required></input>
 
                             <label>Confirm Password</label>
-                            <input onChange={(event) => this.inputPassChangedHandler(event)} type="password" required></input>
-                            <div class="btn">
-                                <div class="inner"></div>
-                                <button type="submit"><span>Sign In</span></button>
+                            <input onChange={(event) => this.inputPassConfChangedHandler(event)} type="password" required></input>
+                            <div className="btn">
+                                <div className="inner"></div>
+                                <button type="submit"><span>Sign Up</span></button>
                             </div>
-                            <div class="signup-link">
+                            <div className="signup-link">
                                 Already a member?
                                 <NavLink to="/log_in">Login now</NavLink>
                             </div>
