@@ -24,7 +24,7 @@ class App extends Component {
       </Switch>
     );
 
-    if ( this.props.isAuthenticated ) {
+    //if ( this.props.isAuthenticated ) {
       routes = (
         <Switch >
           <Route path="/log_in" component={Login} />
@@ -32,10 +32,11 @@ class App extends Component {
           <Route path="/sign_up" component={SignUp} />
           <Route path="/settings" component={Settings}/>
           <Route path="/" exact component={Cards} />
-          <Redirect to="/"/>
+         { //<Redirect to="/"/>}
+          }
         </Switch >
       );
-    }
+    //}
 
     return (
       <div className="App">
