@@ -11,8 +11,8 @@ class SignUp extends Component {
                         Sign Up</div>
                     <form action="#">
                         <div class="data">
-                            <label>Email or Phone</label>
-                            <input type="text" required></input>
+                            <label>Email</label>
+                            <input type="email" required></input>
                         </div>
                         <div class="data">
                             <label>Password</label>
