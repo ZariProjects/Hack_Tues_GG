@@ -10,7 +10,6 @@ class Cards extends Component {
 
     componentDidMount () {
         this.props.onCardInit()
-        console.log(this.props.cards);
     }
     getStars(num){
         let Star = []
@@ -24,10 +23,9 @@ class Cards extends Component {
     
     render () {
         let cardsForU = (<h1>Loading...</h1>);
+
         if (this.props.cards) {
-            console.log(this.props.cards)
             const cardsForUArray = Object.values(this.props.cards);
-            console.log(cardsForUArray)
             cardsForU = cardsForUArray.map(card => (
                         <Card
                         key={Math.random() * 1000000} 
@@ -58,7 +56,8 @@ class Cards extends Component {
 
 const mapStateToProps = state => {
     return {
-        cards: state.card.cards
+        cards: state.card.cards,
+        user: state.auth.user
     };
 };
 
