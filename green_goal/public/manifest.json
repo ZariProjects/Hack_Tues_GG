@@ -1,19 +1,19 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Green Goal",
+  "name": "Green Goal Web App",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "https://firebasestorage.googleapis.com/v0/b/green-goal-5234f.appspot.com/o/forUsDevs%2FiconMain.png?alt=media&token=e9255fd1-2c1c-4931-8914-7e0e789e8880",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "https://firebasestorage.googleapis.com/v0/b/green-goal-5234f.appspot.com/o/forUsDevs%2FiconMain.png?alt=media&token=e9255fd1-2c1c-4931-8914-7e0e789e8880",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "https://firebasestorage.googleapis.com/v0/b/green-goal-5234f.appspot.com/o/forUsDevs%2FiconMain.png?alt=media&token=e9255fd1-2c1c-4931-8914-7e0e789e8880"
       "type": "image/png",
       "sizes": "512x512"
     }
