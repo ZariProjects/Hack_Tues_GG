@@ -15,10 +15,11 @@ class Profile extends Component {
         const userEmail = this.props.user.email;
 
         this.setState({
-            ...this.state,
             dspName: displayName,
             emailInSt: userEmail
         })
+
+        
     }
 
     formSubmitHandler (event) {
@@ -31,16 +32,16 @@ class Profile extends Component {
                 success: true
             })
           }).catch(error => {
-            alert("Account Information Change Unsuccessful", JSON.stringify(error));
+            alert("Account Information Change Unsuccessful1", JSON.stringify(error));
           });
 
-          this.props.user.updateEmail(this.state.emailInSt).then(() => {
-            this.setState({
-                success: true
-            })
-          }).catch(error => {
-            alert("Account Information Change Unsuccessful", JSON.stringify(error));
-          });
+        this.props.user.updateEmail(this.state.emailInSt).then(() => {
+        this.setState({
+            success: true
+        })
+        }).catch(error => {
+        alert("Account Information Change Unsuccessful", JSON.stringify(error));
+        });
     }
 
     emailVerifactionSend () {
@@ -84,7 +85,7 @@ class Profile extends Component {
                 <div className="inputs">
                     <form onSubmit={(event) => this.formSubmitHandler(event)}>
                         <input onChange={(event) => this.inputDspNameChangeHandler(event)} type="text" label="Display Name" value={this.state.emailSt} />
-                        <input onChange={(event) => this.inputEmailChangeHandler(event)}type="email" value={this.state.emailSt} />
+                        <input onChange={(event) => this.inputEmailChangeHandler(event)} type="email" value={this.state.emailSt} />
                         <button type="submit">UPDATE</button>
                     </form>
                     
