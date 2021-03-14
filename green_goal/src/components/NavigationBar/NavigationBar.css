@@ -33,7 +33,7 @@ ul li
 {
     list-style-type: none;
     display: inline-block;
-    padding: 4px 13px;
+    padding: 5px 13px;
     font-size: 2px;
 }
 
@@ -45,7 +45,7 @@ li a
 a:link
 {
     align-self: center;
-    padding: 15px 5px;
+    padding: 15px 8px;
     color:rgb(64, 255, 64);
     font-size: 20px;
 }
@@ -79,5 +79,10 @@ h1
     margin-right: 15px;
 }
 .sep_1{
-    margin-right: 50px;
+    margin-right: 100px;
+}
+
+.user-icon{
+    margin-right: 100px;
+    margin-left: auto;
 }

@@ -9,7 +9,6 @@ import {
   withRouter
 } from "react-router-dom";
 import { connect } from 'react-redux';
-import Settings from './Settings/Settings';
 import SignUp from './SignUp/SignUp';
 import Profile from './Profile/Profile';
 import Achievements from './Achievements/Achievements';
@@ -25,7 +24,6 @@ class App extends Component {
         <Route path="/achievements" component={Achievements}/>
         <Route path="/profile" component={Profile} />
         <Route path="/cards" component={Cards} />
-        <Route path="/settings" component={Settings}/>
         <Route path="/cart" component={Cart}/>
         <Redirect to="/" />
       </Switch>

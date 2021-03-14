@@ -12,6 +12,7 @@ const card = (props) => {
                 <p className = "hr_text">{props.rating}</p>
                 <p className = "hr_text">{props.price}lv</p>
                 {certification}      
+                <button className = "button">Add to cart</button>
             </div>      
         </div>
     );
