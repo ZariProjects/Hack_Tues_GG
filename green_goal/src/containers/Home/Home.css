@@ -1,5 +1,4 @@
-*
-{
+.HomeBody{
     overflow: hidden;
 }
 
@@ -43,7 +42,7 @@
 
 .contentHome
 {
-    max-width: 400px;
+    max-width: 370px;
     font-size: 20px;
     margin: auto;
 }
@@ -52,4 +51,5 @@
 {
     margin-top: 90px;
     font-size: 25px;
+    color: rgb(18, 155, 6);
 }
